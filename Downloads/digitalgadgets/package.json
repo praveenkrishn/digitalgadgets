@@ -1,0 +1,19 @@
+{
+  "name": "digital-gadgets",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm.cmd install --workspaces",
+    "dev": "concurrently \"npm.cmd run dev --workspace backend\" \"npm.cmd run dev --workspace frontend\"",
+    "seed": "npm.cmd run seed --workspace backend",
+    "build": "npm.cmd run build --workspace frontend",
+    "start": "npm.cmd run start --workspace backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
